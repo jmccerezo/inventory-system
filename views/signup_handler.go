@@ -24,6 +24,8 @@ func SignupHandler(w http.ResponseWriter, r *http.Request) {
 		user.Username = username
 		user.Password = HashPassword(password)
 		db.Create(&user)
+
+		http.Redirect(w, r, "/", http.StatusSeeOther)
 	}
 
 	data["Title"] = "Inventory System | Signup"
