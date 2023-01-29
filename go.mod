@@ -3,6 +3,7 @@ module github.com/jmccerezo/inventory-system
 go 1.19
 
 require (
+	github.com/google/uuid v1.3.0
 	golang.org/x/crypto v0.5.0
 	gorm.io/driver/mysql v1.4.5
 	gorm.io/gorm v1.24.3

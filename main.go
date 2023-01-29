@@ -7,6 +7,7 @@ import (
 	"net/url"
 
 	"github.com/jmccerezo/inventory-system/models"
+	"github.com/jmccerezo/inventory-system/views"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -34,6 +35,8 @@ func Handlers() {
 	fmt.Println("Handlers")
 	http.Handle("/templates/", http.StripPrefix("/templates/", http.FileServer(http.Dir("./templates/"))))
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
+
+	http.HandleFunc("/", views.LoginHandler)
 }
 
 func GormDB() *gorm.DB {
