@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,23 @@
     <title>{{.Title}}</title>
     <link rel="stylesheet" href="../static/css/login.css">
 </head>
+
 <body>
     <h1>Inventory System</h1>
     <div class="form-container">
         <h1>Login to your account</h1>
 
         <form method="POST">
-    
             <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-          
-              <button type="submit">Login</button>
+                <input type="text" placeholder="Enter Username" name="username" required>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <button type="submit">Login</button>
             </div>
-          
+
             <span class="reset-password"><a href="/reset-password">Forgot password?</a></span>
             <span class="signup">No account? <a href="/signup">Sign up.</a></span>
-    
         </form>
     </div>
 </body>
+
 </html>
