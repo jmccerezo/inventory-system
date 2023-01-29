@@ -38,6 +38,7 @@ func Handlers() {
 
 	http.HandleFunc("/", views.LoginHandler)
 	http.HandleFunc("/logout", views.LogoutHandler)
+	http.HandleFunc("/signup", views.SignupHandler)
 }
 
 func GormDB() *gorm.DB {
