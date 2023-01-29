@@ -37,6 +37,7 @@ func Handlers() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
 
 	http.HandleFunc("/", views.LoginHandler)
+	http.HandleFunc("/logout", views.LogoutHandler)
 }
 
 func GormDB() *gorm.DB {
